@@ -67,6 +67,25 @@ h3{font-family:var(--display);font-weight:700;font-size:24px;line-height:1.15;ma
 .conditions li{counter-increment:c;position:relative;padding:0 0 14px 52px}
 .conditions li::before{content:counter(c);position:absolute;left:0;top:-2px;width:36px;height:36px;border-radius:50%;background:var(--yellow);color:var(--ink);font-family:var(--display);font-weight:800;display:grid;place-items:center}
 
+
+/* colloquy */
+#colloquy{background:#fff7e6}
+.journey{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:36px 0 0;border:3px solid var(--ink);border-radius:4px}
+.stop{padding:22px;border-right:3px solid var(--ink)}
+.stop:last-child{border-right:0}
+.stop .where{font-family:var(--display);font-weight:800;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.stop:nth-child(1) .where{color:var(--red)}.stop:nth-child(2) .where{color:var(--blue)}.stop:nth-child(3) .where{color:var(--green)}
+.stop p{font-size:17px;margin:0}
+.mobiles{width:100%;height:auto;display:block}
+.blink{animation:blink 2.4s ease-in-out infinite}
+.blink.d2{animation-delay:-.8s}.blink.d3{animation-delay:-1.6s}
+@keyframes blink{0%,100%{opacity:.25}50%{opacity:1}}
+.spin{transform-box:fill-box;transform-origin:center top;animation:spin 7s ease-in-out infinite}
+.spin.d2{animation-duration:9s}
+@keyframes spin{0%,100%{transform:scaleX(1)}50%{transform:scaleX(-1)}}
+@media (prefers-reduced-motion:reduce){.blink,.spin{animation:none}}
+@media (max-width:860px){.journey{grid-template-columns:1fr}.stop{border-right:0;border-bottom:3px solid var(--ink)}.stop:last-child{border-bottom:0}}
+
 /* Musicolour toy */
 #play{background:var(--ink);color:var(--paper)}
 #play h2{color:var(--yellow)}
@@ -128,6 +147,7 @@ footer ul{padding-left:18px}
   </a>
   <a href="#palace">Fun Palace</a>
   <a href="#pask">Pask and play</a>
+  <a href="#colloquy">Colloquy</a>
   <a href="#play">Try it</a>
   <a href="#songs">Songs</a>
   <a href="#archive">Archive</a>
@@ -226,10 +246,48 @@ footer ul{padding-left:18px}
       <div class="card"><div class="yr">1953 ONWARDS</div><h3>Musicolour</h3><p>Built with Robin McKinnon-Wood, a light show that listened to live musicians. It learned what they were playing and, if they repeated themselves, it grew bored and stopped responding, so the performers had to find something new.</p></div>
       <div class="card"><div class="yr">1955</div><h3>Eucrates</h3><p>A teaching machine made with McKinnon-Wood and C.E.G. Bailey, whose knobs set how attentive, forgetful and obstinate it was. It now gives its name to a lens in our own archive.</p></div>
       <div class="card"><div class="yr">1961–1965</div><h3>The Fun Palace</h3><p>Pask's committee asked how a building might sense, model and respond to the people inside it, treating the whole Palace as a learning system.</p></div>
-      <div class="card"><div class="yr">1968</div><h3>Colloquy of Mobiles</h3><p>Shown at Cybernetic Serendipity at the ICA in London: hanging figures that courted each other with light and sound, and that visitors could join with mirrors and torches.</p></div>
+      <div class="card"><div class="yr">1968</div><h3>Colloquy of Mobiles</h3><p>Shown at Cybernetic Serendipity at the ICA in London: hanging figures that courted each other with light and sound, and that visitors could join with mirrors and torches. <a href="#colloquy">Rebuilt in 2018 ↓</a></p></div>
       <div class="card"><div class="yr">1969</div><h3>The Architectural Relevance of Cybernetics</h3><p>His essay in Architectural Design, arguing that architects design systems that people converse with, rather than finished objects.</p></div>
       <div class="card"><div class="yr">1970s</div><h3>Conversation Theory</h3><p>The theory that gathered the threads: knowing as conversation, understanding shown by teachback, and learners as partners rather than recipients.</p></div>
     </div>
+  </div>
+</section>
+
+
+<section id="colloquy">
+  <div class="wrap">
+    <p class="kicker">Rebuilt, fifty years on</p>
+    <h2>Paul Pangaro and the Colloquy of Mobiles</h2>
+    <div class="cols">
+      <div class="prose">
+        <p>Pask's Colloquy of Mobiles was shown at Cybernetic Serendipity at the ICA in London in 1968: larger-than-life figures hanging from the ceiling that turned, blinked and called to one another, courting through light and sound, and that visitors could join with mirrors and torches. It was dismantled after the exhibition, and for half a century it survived only in photographs, drawings and memory.</p>
+        <p>For its fiftieth anniversary in 2018, Paul Pangaro, then chair of the Masters programme in Interaction Design at the College for Creative Studies in Detroit, set out with the master fabricator TJ McLeish and their students to rebuild it at full scale. McLeish drew up design plans from the historical record. The replica keeps the 1968 form as closely as possible, including the three female mobiles first designed by Yolanda Sonnabend, while using modern software, sensors and motors to recreate the behaviours Pask designed. Fresh details came from Mark Dowson, who built the original electronics; no recording of the original sounds is known to exist.</p>
+        <p>The replica then crossed the Atlantic. In February 2020 it opened at the Centre Pompidou in Paris, in Mutations / Créations 4: Neurones, les intelligences simulées, an exhibition tracing a joined history of brains, neural networks, artificial intelligence and cybernetic artefacts. A symposium alongside it included a panel on the dead ends and the future of cybernetics, with Pangaro, Andrew Pickering and Margit Rosen of ZKM. In 2021 the Colloquy entered the permanent collection of ZKM in Karlsruhe.</p>
+        <p>There is a loop here the Ministry cannot resist. The Pompidou is the building many trace back to the Fun Palace, and Pask was the Fun Palace's cybernetician. Half a century on, his conversing machines were finally shown in the building that had grown from the Palace's idea.</p>
+      </div>
+      <div>
+        <svg class="mobiles" viewBox="0 0 400 420" role="img" aria-labelledby="mt">
+          <title id="mt">Hanging figures in the spirit of the Colloquy: tall male mobiles with lamps, rounded female mobiles with mirrors, light passing between them.</title>
+          <line x1="0" y1="10" x2="400" y2="10" stroke="#161412" stroke-width="5"/>
+          <g stroke="#161412" stroke-width="3"><line x1="80" y1="10" x2="80" y2="60"/><line x1="200" y1="10" x2="200" y2="40"/><line x1="320" y1="10" x2="320" y2="60"/><line x1="140" y1="10" x2="140" y2="250"/><line x1="260" y1="10" x2="260" y2="250"/></g>
+          <g class="spin"><rect x="62" y="60" width="36" height="150" rx="6" fill="#1f4fd8" stroke="#161412" stroke-width="4"/><circle class="blink" cx="80" cy="95" r="9" fill="#f5c518"/><circle class="blink d2" cx="80" cy="175" r="9" fill="#e0402b"/></g>
+          <g class="spin d2"><rect x="302" y="60" width="36" height="150" rx="6" fill="#1f4fd8" stroke="#161412" stroke-width="4"/><circle class="blink d3" cx="320" cy="95" r="9" fill="#e0402b"/><circle class="blink" cx="320" cy="175" r="9" fill="#f5c518"/></g>
+          <g><rect x="150" y="40" width="100" height="22" fill="#e0402b" stroke="#161412" stroke-width="4"/><circle class="blink d2" cx="200" cy="51" r="6" fill="#f5c518"/></g>
+          <g class="spin"><ellipse cx="140" cy="300" rx="34" ry="50" fill="#f6efe1" stroke="#161412" stroke-width="4"/><circle cx="140" cy="300" r="16" fill="#d9d2c4" stroke="#161412" stroke-width="3"/></g>
+          <g class="spin d2"><ellipse cx="260" cy="300" rx="34" ry="50" fill="#f6efe1" stroke="#161412" stroke-width="4"/><circle cx="260" cy="300" r="16" fill="#d9d2c4" stroke="#161412" stroke-width="3"/></g>
+          <path class="blink" d="M98 110 L124 290" stroke="#f5c518" stroke-width="5" stroke-dasharray="6 8" fill="none"/>
+          <path class="blink d3" d="M302 110 L276 290" stroke="#f5c518" stroke-width="5" stroke-dasharray="6 8" fill="none"/>
+          <path class="blink d2" d="M156 300 L244 300" stroke="#e0402b" stroke-width="4" stroke-dasharray="4 8" fill="none"/>
+        </svg>
+        <p style="font-size:15px;color:var(--mute);margin:8px 0 0">A sketch in the spirit of the Colloquy, not a drawing of it.</p>
+      </div>
+    </div>
+    <div class="journey">
+      <div class="stop"><div class="where">Detroit · May 2018</div><h3>Rebuilt</h3><p>The full-scale replica opens at the College for Creative Studies, made by Pangaro, McLeish and the Interaction Design students.</p></div>
+      <div class="stop"><div class="where">Paris · February 2020</div><h3>Centre Pompidou</h3><p>Shown in Neurones, les intelligences simulées from 26 February, planned to run until 20 April, with a symposium on the future of cybernetics.</p></div>
+      <div class="stop"><div class="where">Karlsruhe · 2021</div><h3>ZKM</h3><p>The Colloquy finds a permanent home in the collection of ZKM | Center for Art and Media.</p></div>
+    </div>
+    <p style="margin:24px 0 0;font-size:17px">More: <a href="https://www.colloquyofmobiles.com/">colloquyofmobiles.com</a>, the students' project site · Paul Pangaro's <a href="https://pangaro.com/designconversation/2018/01/remaking-pasks-colloquy-of-mobiles/">progress updates</a>, from the first plans to <a href="https://pangaro.com/designconversation/2020/03/colloquy-of-mobiles-displayed-at-centre-pompidou-progress-update-14/">the Pompidou</a> and <a href="https://pangaro.com/designconversation/2021/02/colloquy-of-mobiles-at-zkm/">ZKM</a></p>
   </div>
 </section>
 
@@ -320,6 +378,9 @@ footer ul{padding-left:18px}
       <li>Tanja Herdt, <a href="https://core.ac.uk/download/295185695.pdf">Fun, Power and Control: the Fun Palace of Cedric Price, 1961–1967</a></li>
       <li>Usman Haque, The Architectural Relevance of Gordon Pask (2007)</li>
       <li>Gordon Pask, The Architectural Relevance of Cybernetics, Architectural Design (1969)</li>
+      <li>Paul Pangaro and TJ McLeish, <a href="https://www.pangaro.com/published/Pangaro-McLeish_Colloquy-2018_AISB-2018_distro.pdf">Colloquy of Mobiles 2018 Project</a>, AISB 2018</li>
+      <li>Paul Pangaro, Colloquy progress updates #10, #13, #14 and #15, <a href="https://pangaro.com/designconversation/">pangaro.com/designconversation</a></li>
+      <li><a href="https://livingarchitecturesystems.com/the-colloquy-of-mobiles/">Living Architecture Systems Group, The Colloquy of Mobiles</a></li>
       <li>Liss C. Werner, <a href="https://core.ac.uk/download/161784537.pdf">Gordon Pask's 'Cybernetic Theatre'</a> (2018)</li>
     </ul>
     <p>The Ministry of Fun · American Society for Cybernetics · Contact: peter.tuddenham@asc-cybernetics.org</p>
